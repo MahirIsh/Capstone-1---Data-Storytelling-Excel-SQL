@@ -73,3 +73,15 @@ JOIN store_locations sl
 WHERE sl.State = 'New York'
 GROUP BY ic.Category
 ORDER BY Revenue DESC;
+
+-- Monthly Revenue Trend for New York
+SELECT
+    YEAR(Transaction_Date) AS SalesYear,
+    MONTH(Transaction_Date) AS SalesMonth,
+    SUM(ss.Sale_Amount) AS Revenue
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York'
+GROUP BY YEAR(Transaction_Date), MONTH(Transaction_Date)
+ORDER BY SalesYear, SalesMonth;
