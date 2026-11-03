@@ -85,3 +85,45 @@ JOIN store_locations sl
 WHERE sl.State = 'New York'
 GROUP BY YEAR(Transaction_Date), MONTH(Transaction_Date)
 ORDER BY SalesYear, SalesMonth;
+
+-- Average Transaction Value for New York
+SELECT
+    ROUND(AVG(ss.Sale_Amount), 2) AS AvgTransactionValue
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York';
+
+-- Revenue by Year for New York
+SELECT
+    YEAR(Transaction_Date) AS SalesYear,
+    SUM(ss.Sale_Amount) AS Revenue
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York'
+GROUP BY YEAR(Transaction_Date)
+ORDER BY SalesYear;
+
+-- Top Technology Products in New York
+SELECT
+    p.Product,
+    SUM(ss.Sale_Amount) AS Revenue
+FROM store_sales ss
+JOIN products p
+    ON ss.Prod_Num = p.ProdNum
+JOIN inventory_categories ic
+    ON p.CategoryId = ic.CategoryId
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York'
+AND ic.Category = 'Technology & Accessories'
+GROUP BY p.Product
+ORDER BY Revenue DESC
+LIMIT 10;
+
+-- Top Store and Category Combinations in New York
+SELECT
+    sl.StoreLocation,
+    ic.Category,
+    SUM(ss.Sale_Amount
