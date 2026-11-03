@@ -33,3 +33,43 @@ WHERE sl.State = 'New York'
 GROUP BY p.Product
 ORDER BY Revenue DESC
 LIMIT 10;
+
+-- Lowest Revenue Products in New York
+SELECT
+    p.Product,
+    SUM(ss.Sale_Amount) AS Revenue
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+JOIN products p
+    ON ss.Prod_Num = p.ProdNum
+WHERE sl.State = 'New York'
+GROUP BY p.Product
+ORDER BY Revenue ASC
+LIMIT 10;
+
+-- Revenue by Store Location
+SELECT
+    sl.StoreLocation,
+    SUM(ss.Sale_Amount) AS Revenue
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York'
+GROUP BY sl.StoreLocation
+ORDER BY Revenue DESC;
+
+-- Revenue by Category in New York
+SELECT
+    ic.Category,
+    SUM(ss.Sale_Amount) AS Revenue
+FROM store_sales ss
+JOIN products p
+    ON ss.Prod_Num = p.ProdNum
+JOIN inventory_categories ic
+    ON p.CategoryId = ic.CategoryId
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York'
+GROUP BY ic.Category
+ORDER BY Revenue DESC;
