@@ -1,5 +1,12 @@
+-- ==========================================
 -- Capstone 1: Data Storytelling, Excel & SQL
+-- Student: Mahir Ishtiaq
 -- Territory: New York
+-- Purpose:
+-- Analyze New York sales performance using
+-- transaction, product, category, and
+-- store-level metrics.
+-- ==========================================
 
 USE sample_sales;
 
