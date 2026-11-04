@@ -134,3 +134,41 @@ SELECT
     sl.StoreLocation,
     ic.Category,
     SUM(ss.Sale_Amount
+
+-- New York Data Coverage Period
+SELECT
+    MIN(Transaction_Date) AS StartDate,
+    MAX(Transaction_Date) AS EndDate
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York';
+
+-- East Region Revenue Comparison
+SELECT
+    m.Region,
+    SUM(ss.Sale_Amount) AS RegionRevenue
+FROM store_sales ss
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+JOIN management m
+    ON sl.State = m.State
+WHERE m.Region = 'East'
+GROUP BY m.Region;
+
+-- Transactions and Average Transaction Amount by Category
+SELECT
+    ic.Category,
+    COUNT(*) AS Transactions,
+    ROUND(AVG(ss.Sale_Amount), 2) AS AvgTransactionAmount
+FROM store_sales ss
+JOIN products p
+    ON ss.Prod_Num = p.ProdNum
+JOIN inventory_categories ic
+    ON p.CategoryId = ic.CategoryId
+JOIN store_locations sl
+    ON ss.Store_ID = sl.StoreId
+WHERE sl.State = 'New York'
+GROUP BY ic.Category
+ORDER BY Transactions DESC;
+
