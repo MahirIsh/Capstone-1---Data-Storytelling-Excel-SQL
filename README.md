@@ -1,7 +1,7 @@
 # Capstone 1: New York Sales Analysis
 
-Year Up United Data Analytics
-Author: Mahir Ishtiaq
+- Year Up United Data Analytics
+- Mahir Ishtiaq
 
 ## Project Overview
 
