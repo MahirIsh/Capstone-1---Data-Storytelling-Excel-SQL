@@ -97,4 +97,6 @@ For Q1 2026, I recommend focusing sales attention on **Technology & Accessories,
 - `README.md`: project overview, findings and recommendation
 
 ## Capstone Video
-
+[Watch the 10-minute project walkthrough](https://1drv.ms/p/c/50f06bd31489f7c4/IQBxCmnr5OrPSKgEbIjA06TFAYez-VuECZRure133NyMTjc?e=qT9FJD)
+ 
+The walkthrough was recorded in PowerPoint. Open the file and start the slideshow to play the narration.
