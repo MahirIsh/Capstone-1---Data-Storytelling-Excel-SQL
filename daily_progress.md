@@ -79,6 +79,3 @@
 - Q1 has been strong for Technology and the weakest quarter for Textbooks every year.
 - Q4 2025 was the best quarter on record at $440,455.
 
-### Recommendation
-
-- Focus Q1 2026 on Technology & Accessories, especially laptops, at the New York and Rochester stores, and time textbook promotions for Q2 and Q3.
