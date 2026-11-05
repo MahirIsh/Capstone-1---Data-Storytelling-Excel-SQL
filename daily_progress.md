@@ -68,6 +68,30 @@
 - Added a chart-export query for quarterly revenue by category
 - Built a stacked-column PivotChart of New York quarterly revenue by category, 2022–2025
 
+## November 5, 2026
+
+### Query Fixes and Reorganization
+
+- Resolved a merge conflict and removed leftover conflict markers from the script
+- Renamed queries.sql to ishtiaq_sales_analysis.sql to match the project naming convention
+- Reorganized the script by the six sales manager questions, with consistent naming and comments
+- Fixed an incomplete store-category combination query
+- Combined total revenue and data coverage period into one query, with dates formatted to display correctly
+- Rebuilt the region comparison to show New York revenue, East region revenue, and New York's share
+- Added monthly transaction counts and average transaction amount by category
+- Added a store ranking using RANK()
+- Added a growth-drivers query (active stores, transactions, and average sale by year)
+- Added quarterly revenue by category to support the next-quarter recommendation
+- Added additional analysis: top and lowest products, top non-technology products, and store-category combinations
+- Wrote the Q1 2026 recommendation in the script
+
+  ### Documentation and Presentation
+
+- Rewrote the README with findings for each question, additional analysis, and the recommendation
+- Built a 12-slide presentation organized by the six questions plus additional analysis
+- Recorded the 10-minute video walkthrough in PowerPoint
+- Uploaded the presentation to OneDrive and linked it in the README, since the file exceeds GitHub's 100 MB limit
+
 ### Key Findings
 
 - The data covers four full years: January 1, 2022 to December 31, 2025.
