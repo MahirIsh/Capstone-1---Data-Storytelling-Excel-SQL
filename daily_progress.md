@@ -46,12 +46,39 @@
 - Identified highest-performing store-category combinations
 - Completed SQL analysis for the New York territory
 
+## November 4, 2026
+
+### Query Fixes and Reorganization
+
+- Renamed queries.sql to ishtiaq_sales_analysis.sql to match the project naming convention
+- Resolved a merge conflict and removed leftover conflict markers from the script
+- Reorganized the script by the six sales manager questions with clear comment labels
+- Fixed an incomplete store-category combination query
+- Combined total revenue and data coverage period into one query, with dates formatted to display correctly
+- Rebuilt the region comparison to show New York revenue, East region revenue, and New York's share
+- Added monthly transaction counts and average transaction amount by category
+- Added an explicit store ranking using RANK()
+- Added a growth-drivers query (active stores, transactions, and average sale by year)
+- Added quarterly revenue by category to support the next-quarter recommendation
+- Replaced the duplicate top-technology query with top products outside Technology & Accessories
+- Wrote the Q1 2026 recommendation in the script
+
+### Excel PivotChart
+
+- Added a chart-export query for quarterly revenue by category
+- Built a stacked-column PivotChart of New York quarterly revenue by category, 2022–2025
+
 ### Key Findings
 
-- New York generated $4,330,817.09 in revenue across 31,039 transactions.
-- The average transaction value was $139.53.
-- Revenue increased from $687,382.03 in 2022 to $1,552,601.64 in 2025, indicating strong year-over-year growth.
-- Technology & Accessories was the highest-performing category, generating $3,071,158.25 (approximately 71% of total revenue).
-- The New York and Rochester locations were the top-performing stores by revenue.
-- MSI Creator Z16 and Apple MacBook Pro (M2, 14-inch) were among the highest-performing products.
-- Technology & Accessories was the top-performing category across nearly all high-revenue store locations.
+- The data covers four full years: January 1, 2022 to December 31, 2025.
+- New York accounts for 64.4% of East region in-store revenue ($4.33M of $6.72M).
+- All 12 New York stores were active every year, so growth came from more transactions at existing stores, not new locations.
+- Transactions rose 49% in 2023 with a similar average sale, stayed flat in 2024, and rose 74% in 2025 while the average sale fell 15%.
+- Technology & Accessories is 21% of transactions but 71% of revenue; Stationery has the most transactions but only 1.5% of revenue.
+- The New York and Rochester stores earn about twice the revenue of the other ten stores because they get about twice the transactions.
+- Q1 has been strong for Technology and the weakest quarter for Textbooks every year.
+- Q4 2025 was the best quarter on record at $440,455.
+
+### Recommendation
+
+- Focus Q1 2026 on Technology & Accessories, especially laptops, at the New York and Rochester stores, and time textbook promotions for Q2 and Q3.
