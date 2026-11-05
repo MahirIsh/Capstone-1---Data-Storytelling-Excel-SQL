@@ -1,6 +1,3 @@
-# Capstone-1---Data-Storytelling-Excel-SQL
-Year Up United Capstone 1 project using SQL, Excel, and data storytelling techniques to analyze retail sales data and provide business recommendations.
-
 # Capstone 1: New York Sales Analysis
 
 Year Up United Data Analytics
@@ -104,4 +101,3 @@ For Q1 2026, I recommend focusing sales attention on **Technology & Accessories,
 
 ## Capstone Video
 
-[Watch the project walkthrough](ADD-VIDEO-LINK-HERE)
